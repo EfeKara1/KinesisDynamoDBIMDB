@@ -22,27 +22,3 @@ This project demonstrates a data engineering pipeline using **Amazon Kinesis Fir
    git clone https://github.com/yourusername/kinesis_imdb_pipeline.git
    cd kinesis_imdb_pipeline
 
-## Project Structure
-
-kinesis_imdb_pipeline/
-├── ─── src/                      # Source code for the pipeline
-│    ├── ─── __init__.py          # Makes src a package
-│    ├── ─── consumer.py           # Kinesis Consumer to write data to DynamoDB
-│    ├── ─── create_firehose.py    # Script to create Kinesis Firehose and S3 bucket
-│    ├── ─── dynamodb_utils.py      # Helper functions for DynamoDB interactions
-│    ├── ─── producer.py           # Kinesis Producer to stream data
-│    └── ─── config.py             # Configuration settings for AWS resources
-│
-├── ─── data/                     # Directory for datasets
-│    ├── ─── imdb_1000.csv         # Sample dataset for processing
-│
-├── ─── tests/                    # Unit tests for the project
-│    ├── ─── __init__.py           # Makes tests a package
-│    ├── ─── test_consumer.py      # Tests for the Kinesis consumer
-│    ├── ─── test_producer.py      # Tests for the Kinesis producer
-│    └── └── test_dynamodb_utils.py  # Tests for DynamoDB utility functions
-│
-├── ─── requirements.txt           # List of project dependencies
-├── ─── README.md                  # Project documentation and setup instructions
-├── ─── .gitignore                 # Specifies intentionally untracked files
-└── └── LICENSE                    # License for the project
