@@ -1,0 +1,15 @@
+kinesis_imdb_pipeline/
+├── src/
+│   ├── producer.py                # Kinesis Producer code
+│   ├── create_firehose_stream.py   # Script to create Kinesis Firehose and S3 bucket
+│   ├── consumer.py                 # Kinesis Consumer code to write to DynamoDB
+│   ├── config.py                  # Configuration for Kinesis Firehose, S3, and DynamoDB
+│   └── dynamodb_utils.py          # Helper functions for DynamoDB setup
+├── data/
+│   └── imdb_1000.csv              # Sample dataset for local testing
+├── tests/                         # Unit tests
+│   └── test_pipeline.py           # Tests for producer and consumer
+├── requirements.txt               # Python dependencies
+├── README.md                      # Project overview and setup instructions
+└── .gitignore                     # Ignored files
+
