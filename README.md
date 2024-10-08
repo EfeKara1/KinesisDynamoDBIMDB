@@ -25,16 +25,24 @@ This project demonstrates a data engineering pipeline using **Amazon Kinesis Fir
 ## Project Structure
 
 kinesis_imdb_pipeline/
-├── src/                  # Source code
-│   ├── consumer.py       # Kinesis Consumer code to write to DynamoDB
-│   ├── create_firehose_stream.py   # Script to create Kinesis Firehose and S3 bucket
-│   ├── dynamodb_utils.py # Helper functions for DynamoDB setup
-│   ├── producer.py       # Kinesis Producer code
-│   └── config.py        # Configuration for Kinesis Firehose, S3, and DynamoDB
-├── data/                 # Dataset
-│   └── imdb_1000.csv     # Sample dataset for local testing
-├── tests/                # Unit tests
-│   └── test_pipeline.py  # Tests for producer and consumer
-├── requirements.txt      # Python dependencies
-├── README.md             # Project overview and setup instructions
-└── .gitignore            # Ignored files
+├── ─── src/                      # Source code for the pipeline
+│    ├── ─── __init__.py          # Makes src a package
+│    ├── ─── consumer.py           # Kinesis Consumer to write data to DynamoDB
+│    ├── ─── create_firehose.py    # Script to create Kinesis Firehose and S3 bucket
+│    ├── ─── dynamodb_utils.py      # Helper functions for DynamoDB interactions
+│    ├── ─── producer.py           # Kinesis Producer to stream data
+│    └── ─── config.py             # Configuration settings for AWS resources
+│
+├── ─── data/                     # Directory for datasets
+│    ├── ─── imdb_1000.csv         # Sample dataset for processing
+│
+├── ─── tests/                    # Unit tests for the project
+│    ├── ─── __init__.py           # Makes tests a package
+│    ├── ─── test_consumer.py      # Tests for the Kinesis consumer
+│    ├── ─── test_producer.py      # Tests for the Kinesis producer
+│    └── └── test_dynamodb_utils.py  # Tests for DynamoDB utility functions
+│
+├── ─── requirements.txt           # List of project dependencies
+├── ─── README.md                  # Project documentation and setup instructions
+├── ─── .gitignore                 # Specifies intentionally untracked files
+└── └── LICENSE                    # License for the project
